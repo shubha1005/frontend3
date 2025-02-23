@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "bootstrap-icons": "^1.11.3",
+    "email-js": "^2.0.3",
+    "emailjs-com": "^3.2.0"
+  }
+}

@@ -1,0 +1,28 @@
+.container {
+    text-align: center;
+    margin-top: 100px auto;
+    max-width: 600px;
+  }
+  
+  .progress-bar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin: 20px 0;
+  }
+  
+  .stage {
+    flex: 1;
+    height: 10px;
+    border-radius: 5px;
+    margin: 0 2px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .stage-name {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #333;
+  }

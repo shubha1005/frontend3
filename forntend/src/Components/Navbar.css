@@ -1,0 +1,246 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: #ffff;
+    color: #3D8D7A;
+    position: fixed !important;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    backdrop-filter: blur(8px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 10px 20px !important;
+}
+
+/* Logo */
+.navbar .logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.navbar .logo:hover {
+    transform: scale(1.1);
+}
+
+.navbar .logo i {
+    margin-right: 10px;
+    color: #B3D8A8;
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin-bottom: 0px;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #3D8D7A;
+    font-size: 1.1em;
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    transition: all 0.3s ease-in-out;
+    border-radius: 6px;
+    position: relative;
+}
+
+.nav-links li a i {
+    margin-right: 8px;
+    color: #B3D8A8;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #B3D8A8;
+}
+
+.nav-links li a:hover i {
+    color: #3D8D7A;
+}
+
+/* Underline Animation */
+.nav-links li a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 4px;
+    bottom: -2px;
+    left: 50%;
+    background: #B3D8A8;
+    border-radius: 50px;
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+.nav-links li a:hover::after {
+    width: 70%;
+    left: 15%;
+}
+
+/* Logout & Login Button */
+.logout-btn, .login-btn {
+    background-color: #B3D8A8;
+    color: #3D8D7A;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.logout-btn:hover, .login-btn:hover {
+    background-color: #3D8D7A;
+    color: #B3D8A8;
+}
+
+/* Mobile Menu Button */
+.menu-toggle {
+    display: none;
+    font-size: 2em;
+    cursor: pointer;
+    color: #3D8D7A;
+    z-index: 99;
+    transition: transform 0.3s ease;
+}
+
+.menu-toggle:hover {
+    transform: rotate(90deg);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px 15px !important;
+    }
+
+    .navbar .logo {
+        font-size: 1.5em;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        background-color: #ffff;
+        width: 250px;
+        height: 100vh;
+        text-align: center;
+        padding-top: 80px;
+        transition: right 0.4s ease-in-out;
+        box-shadow: -2px 0px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links li {
+        margin: 20px 0;
+    }
+
+    .nav-links li a {
+        font-size: 1.2em;
+        width: 80%;
+        margin: auto;
+        display: block;
+        border-radius: 8px;
+        transition: background 0.3s ease;
+    }
+
+    .nav-links li a:hover {
+        background-color: #f0f0f0;
+    }
+
+    .logout-btn, .login-btn {
+        width: 80%;
+        margin: 10px auto;
+        display: block;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar .logo {
+        font-size: 1.3em;
+    }
+
+    .nav-links {
+        width: 200px;
+        padding-top: 60px;
+    }
+
+    .nav-links li a {
+        font-size: 1em;
+    }
+
+    .logout-btn, .login-btn {
+        font-size: 0.9em;
+    }
+}
+
+/* Botpress Webchat Container */
+#botpress-webchat {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000; /* Ensure it's above other elements */
+    max-width: 100%; /* Ensure it doesn't overflow the screen */
+}
+
+/* Responsive Adjustments for Chat Widget */
+@media (max-width: 768px) {
+    #botpress-webchat {
+        bottom: 10px;
+        right: 10px;
+        width: 90%; /* Constrain width on smaller screens */
+        max-width: 300px; /* Limit maximum width */
+    }
+
+    /* Adjust the chat widget's internal layout */
+    #botpress-webchat iframe {
+        width: 100% !important;
+        height: auto !important;
+        max-height: 80vh; /* Limit height to 80% of the viewport */
+        border-radius: 10px; /* Optional: Add rounded corners */
+    }
+}
+
+@media (max-width: 480px) {
+    #botpress-webchat {
+        bottom: 5px;
+        right: 5px;
+        width: 95%; /* Take up more width on very small screens */
+        max-width: none; /* Allow it to stretch */
+    }
+
+    #botpress-webchat iframe {
+        max-height: 70vh; /* Further reduce height on very small screens */
+    }
+}

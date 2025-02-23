@@ -1,0 +1,302 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #EFE9D5;
+    color: #27445D;
+}
+
+/* Navbar */
+header {
+    background-color: #27445D;
+    padding: 15px 0;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    overflow: hidden;
+}
+
+/* Background Video */
+#hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Dark Overlay */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Dark Overlay for Better Readability */
+}
+
+/* Text & Content */
+.hero-text {
+    position: relative;
+    z-index: 2;
+    text-align: left;
+    padding-left: 10%;
+}
+
+.hero-text h5 {
+    font-size: 16px;
+    color: #ddd;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.hero-text h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+.hero-text .highlight {
+    color: #88b04c;
+}
+
+/* Buttons */
+.hero-buttons .btn {
+    padding: 12px 25px;
+    font-size: 1rem;
+    border-radius: 30px;
+    transition: 0.3s ease-in-out;
+}
+
+.primary-btn {
+    background-color: #88b04c;
+    color: white;
+    border: none;
+}
+
+.primary-btn:hover {
+    background-color: #6D8F3E;
+}
+
+.secondary-btn {
+    background-color: transparent;
+    border: 2px solid #88b04c;
+    color: #88b04c;
+    margin-left: 10px;
+}
+
+.secondary-btn:hover {
+    background-color: #88b04c;
+    color: white;
+}
+
+/* Right Side (Image) */
+.hero-image {
+    position: relative;
+    text-align: center;
+    z-index: 2;
+}
+
+.hero-image .main-img {
+    width: 80%;
+    border-radius: 20px;
+    box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Floating Card */
+.floating-card {
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+    background: white;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    text-align: left;
+    width: 180px;
+}
+
+.floating-card p {
+    font-weight: bold;
+    margin: 0;
+}
+
+.floating-card small {
+    display: block;
+    color: #666;
+}
+
+.team-avatars {
+    margin-top: 10px;
+    display: flex;
+}
+
+.team-avatars img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+
+/* Floating Card */
+.floating-card {
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+    background: white;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    text-align: left;
+    width: 180px;
+}
+
+.floating-card p {
+    font-weight: bold;
+    margin: 0;
+}
+
+.floating-card small {
+    display: block;
+    color: #666;
+}
+
+.team-avatars {
+    margin-top: 10px;
+    display: flex;
+}
+
+.team-avatars img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+/* Floating Icons */
+.floating-icon {
+    position: absolute;
+    width: 80px;
+    opacity: 0.8;
+}
+
+.icon-1 {
+    top: 10%;
+    left: 5%;
+    animation: floatUpDown 4s infinite ease-in-out;
+}
+
+.icon-2 {
+    bottom: 10%;
+    right: 5%;
+    animation: floatUpDown 4s infinite ease-in-out reverse;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes floatUpDown {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+}
+
+/* Info Section */
+.info {
+    text-align: center;
+}
+
+.card {
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card img {
+    height: 250px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+footer {
+    background-color: #27445D;
+    color: white;
+    padding: 20px 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Botpress Webchat Container */
+#botpress-webchat {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000; /* Ensure it's above other elements */
+    max-width: 100%; /* Ensure it doesn't overflow the screen */
+}
+
+/* Responsive Adjustments for Chat Widget */
+@media (max-width: 768px) {
+    #botpress-webchat {
+        bottom: 10px;
+        right: 10px;
+        width: 90%; /* Constrain width on smaller screens */
+        max-width: 300px; /* Limit maximum width */
+    }
+
+    /* Adjust the chat widget's internal layout */
+    #botpress-webchat iframe {
+        width: 100% !important;
+        height: auto !important;
+        max-height: 80vh; /* Limit height to 80% of the viewport */
+        border-radius: 10px; /* Optional: Add rounded corners */
+    }
+
+    .main-img {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    #botpress-webchat {
+        bottom: 5px;
+        right: 5px;
+        width: 95%; /* Take up more width on very small screens */
+        max-width: none; /* Allow it to stretch */
+    }
+
+    #botpress-webchat iframe {
+        max-height: 70vh; /* Further reduce height on very small screens */
+    }
+}
